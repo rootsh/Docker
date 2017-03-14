@@ -9,7 +9,7 @@ RUN curl http://curl.haxx.se/ca/cacert.pem -o /etc/pki/tls/certs/ca-bundle.crt
 RUN update-ca-trust force-enable
 
 
-RUN mkdir -p /opt/imageproxy
+RUN mkdir -p $GOPATH
 RUN cd $GOPATH 
 RUN go get willnorris.com/go/imageproxy/cmd/imageproxy
 
